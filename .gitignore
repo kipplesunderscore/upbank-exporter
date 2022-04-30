@@ -1,0 +1,4 @@
+upcsv_env/
+access_token
+*.csv
+/upbank_csv.egg-info/
