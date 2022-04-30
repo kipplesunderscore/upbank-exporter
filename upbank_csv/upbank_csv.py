@@ -62,6 +62,8 @@ def output_csv_for_month(year, month, access_token_file):
             upbank = Upbank(access_token)
             
             transactions = []
+            csv_writer = csv.DictWriter(csvfile, fieldnames)
+            csv_writer.writeheader()
             for page in upbank.transactions(year, month):
                 for transaction in page:
                     transactions.append(
@@ -77,8 +79,6 @@ def output_csv_for_month(year, month, access_token_file):
                         }
                     )
                     
-                    csv_writer = csv.DictWriter(csvfile, fieldnames)
-                    csv_writer.writeheader()   
                     csv_writer.writerows(transactions)
 
 def main():
