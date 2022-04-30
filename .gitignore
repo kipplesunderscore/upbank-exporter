@@ -2,3 +2,6 @@ upcsv_env/
 access_token
 *.csv
 /upbank_csv.egg-info/
+/build/
+/dist/
+__pycache__/

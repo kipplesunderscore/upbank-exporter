@@ -81,11 +81,12 @@ def output_csv_for_month(year, month, access_token_file):
                     csv_writer.writeheader()   
                     csv_writer.writerows(transactions)
 
-parser = argparse.ArgumentParser(description="Up Bank CSV Exporter.")
-parser.add_argument('-year', metavar='year', type=int, nargs='?', default=datetime.now().year)
-parser.add_argument('-month', metavar='month', type=int, nargs='?', default=datetime.now().month)
-parser.add_argument('-token-file', metavar='file', type=str, nargs='?', default='./access_token')
+def main():
+    parser = argparse.ArgumentParser(description="Up Bank CSV Exporter.")
+    parser.add_argument('-year', metavar='year', type=int, nargs='?', default=datetime.now().year)
+    parser.add_argument('-month', metavar='month', type=int, nargs='?', default=datetime.now().month)
+    parser.add_argument('-token-file', metavar='file', type=str, nargs='?', default='./access_token')
 
-args = parser.parse_args()
+    args = parser.parse_args()
 
-output_csv_for_month(args.year, args.month, args.token_file)
+    output_csv_for_month(args.year, args.month, args.token_file)
