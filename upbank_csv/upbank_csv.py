@@ -107,6 +107,7 @@ def output_csv_for_month(year, month, access_token_file):
                             'category': transaction['category'],
                             'description': description,
                             'raw_text': transaction['attributes']['rawText'],
+                            'message': transaction['attributes']['message'],
                             'amount': amount,
                             'roundup': roundup,
                             'subtotal': subtotal,
