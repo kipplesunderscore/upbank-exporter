@@ -11,6 +11,7 @@ python setup.py install
 ## Usage
 
 You will need a file with the Up API Personal Access Token string inside to pass to the script. [Upbank Token](https://api.up.com.au/getting_started)
+
 By default the script will check `./access_token` without needing to pass as argument.
 
 ```bash
